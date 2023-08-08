@@ -1,4 +1,4 @@
-import background from '../money.jpg';
+import background from '../assets/money.jpg';
 import {useNavigate} from "react-router-dom";
 import {useFusionAuth} from "@fusionauth/react-sdk";
 import {useEffect} from "react";

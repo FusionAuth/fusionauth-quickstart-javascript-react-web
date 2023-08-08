@@ -1,4 +1,4 @@
-import logo from './changebank.svg';
+import logo from './assets/changebank.svg';
 import './App.css';
 import HomePage from "./pages/HomePage";
 import AccountPage from "./pages/AccountPage";
