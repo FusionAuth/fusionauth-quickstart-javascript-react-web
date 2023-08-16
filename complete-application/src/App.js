@@ -7,28 +7,28 @@ import LogoHeader from "./components/LogoHeader";
 import MenuBar from "./components/MenuBar";
 
 function App() {
-    const {user, isAuthenticated, isLoading, login} = useFusionAuth();
+  const {isLoading} = useFusionAuth();
 
-    if (isLoading) {
-        return null;
-    }
+  if (isLoading) {
+    return null;
+  }
 
-    return (
-        <div id="page-container">
-            <div id="page-header">
-                <LogoHeader />
-                <MenuBar />
-            </div>
+  return (
+    <div id="page-container">
+      <div id="page-header">
+        <LogoHeader/>
+        <MenuBar/>
+      </div>
 
-            <div style={{flex: 1}}>
-                <Routes>
-                    <Route path="/" element={<HomePage/>}/>
-                    <Route path="/account" element={<AccountPage/>}/>
-                    <Route path="*" element={<Navigate to="/"/>}/>
-                </Routes>
-            </div>
-        </div>
-    );
+      <div style={{flex: 1}}>
+        <Routes>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/account" element={<AccountPage/>}/>
+          <Route path="*" element={<Navigate to="/"/>}/>
+        </Routes>
+      </div>
+    </div>
+  );
 }
 
 export default App;
