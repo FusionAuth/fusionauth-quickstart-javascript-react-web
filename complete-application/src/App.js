@@ -5,6 +5,7 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import {useFusionAuth} from "@fusionauth/react-sdk";
 import LogoHeader from "./components/LogoHeader";
 import MenuBar from "./components/MenuBar";
+import MakeChangePage from "./pages/MakeChangePage";
 
 function App() {
   const {isLoading} = useFusionAuth();
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/account" element={<AccountPage/>}/>
+          <Route path="/make-change" element={<MakeChangePage/>}/>
           <Route path="*" element={<Navigate to="/"/>}/>
         </Routes>
       </div>
