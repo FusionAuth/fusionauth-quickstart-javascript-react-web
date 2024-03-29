@@ -6,7 +6,7 @@ import {useEffect} from "react";
 export default function HomePage() {
   const navigate = useNavigate();
 
-  const {isAuthenticated, isLoading} = useFusionAuth();
+  const {isAuthenticated, isLoading, login, register} = useFusionAuth();
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -23,7 +23,16 @@ export default function HomePage() {
       <div className="content-container">
         <div style={{marginBottom: '100px'}}>
           <h1>Welcome to Changebank</h1>
-          <p>To get started, <a style={{cursor: "pointer"}}>log in or create a new account</a>.</p>
+          <p>
+            To get started,
+            <button className="button-redirect" style={{ cursor: "pointer" }} onClick={() => login()}>
+              log in
+            </button>
+            or
+            <button className="button-redirect" style={{ cursor: "pointer" }} onClick={() => register()}>
+              create a new account.
+            </button>
+          </p>
         </div>
       </div>
 

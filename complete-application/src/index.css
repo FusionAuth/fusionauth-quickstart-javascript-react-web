@@ -92,6 +92,14 @@ body {
   text-decoration-line: none;
 }
 
+.button-redirect {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #096324;
+}
+
 .column-container {
   display: flex;
   flex-direction: row;
