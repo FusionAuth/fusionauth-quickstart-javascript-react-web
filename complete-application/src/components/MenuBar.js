@@ -14,11 +14,10 @@ export default function MenuBar() {
           </>
         ) : (
           <>
-            <a className="menu-link">About</a>
-            <a className="menu-link">Services</a>
-            <a className="menu-link">Products</a>
-
-            <a className="menu-link" style={{textDecorationLine: "underline"}}>Home</a>
+            <button className="menu-link">About</button>
+            <button className="menu-link">Services</button>
+            <button className="menu-link">Products</button>
+            <buttton className="menu-link" style={{textDecorationLine: "underline"}}>Home</buttton>
           </>
         )
       }
