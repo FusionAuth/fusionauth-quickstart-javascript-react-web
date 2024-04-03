@@ -18,7 +18,7 @@ export default function LogoHeader() {
             </button>
           </div>
         ) : (
-          <button className="button-lg" style={{cursor: "pointer"}} onClick={() => login()}>
+          <button className="button-lg" style={{cursor: "pointer"}} onClick={() => login('state-from-login')}>
             Login
           </button>
         )

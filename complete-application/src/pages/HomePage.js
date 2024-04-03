@@ -25,11 +25,11 @@ export default function HomePage() {
           <h1>Welcome to Changebank</h1>
           <p>
             To get started,
-            <button className="button-redirect" style={{ cursor: "pointer" }} onClick={() => login()}>
+            <button className="button-redirect" style={{ cursor: "pointer" }} onClick={() => login('state-from-login')}>
               log in
             </button>
             or
-            <button className="button-redirect" style={{ cursor: "pointer" }} onClick={() => register()}>
+            <button className="button-redirect" style={{ cursor: "pointer" }} onClick={() => register('state-from-register')}>
               create a new account.
             </button>
           </p>

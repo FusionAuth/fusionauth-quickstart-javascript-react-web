@@ -5,13 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 import {FusionAuthProvider} from "@fusionauth/react-sdk";
-import {config} from "./config";
+import {configWithFusionAuthServer} from "./config";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <FusionAuthProvider {...config}>
+      <FusionAuthProvider {...configWithFusionAuthServer}>
         <App/>
       </FusionAuthProvider>
     </BrowserRouter>
