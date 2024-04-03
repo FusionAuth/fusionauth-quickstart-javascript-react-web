@@ -13,14 +13,14 @@ export default function LogoHeader() {
             <p className="header-email">
               {user.email}
             </p>
-            <a className="button-lg" style={{cursor: "pointer"}} onClick={() => logout()}>
+            <button className="button-lg" style={{cursor: "pointer"}} onClick={() => logout()}>
               Logout
-            </a>
+            </button>
           </div>
         ) : (
-          <a className="button-lg" style={{cursor: "pointer"}} onClick={() => login()}>
+          <button className="button-lg" style={{cursor: "pointer"}} onClick={() => login()}>
             Login
-          </a>
+          </button>
         )
       }
     </div>

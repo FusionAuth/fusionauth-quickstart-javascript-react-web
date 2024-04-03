@@ -70,9 +70,13 @@ body {
 
 .menu-link {
   font-weight: 600;
+  font-size: 20px;
+  font-family: sans-serif;
   color: #FFFFFF;
   margin-left: 40px;
   text-decoration-line: none;
+  background: none;
+  border: none;
 }
 
 .active {
@@ -81,14 +85,14 @@ body {
 
 .button-lg {
   width: 150px;
-  height: 30px;
+  height: 40px;
   background-color: #096324;
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 700;
   border-radius: 10px;
   text-align: center;
-  padding-top: 10px;
+  padding: 10px;
   text-decoration-line: none;
 }
 
