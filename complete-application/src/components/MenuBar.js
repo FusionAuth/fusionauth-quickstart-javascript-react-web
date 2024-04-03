@@ -17,7 +17,7 @@ export default function MenuBar() {
             <button className="menu-link">About</button>
             <button className="menu-link">Services</button>
             <button className="menu-link">Products</button>
-            <buttton className="menu-link" style={{textDecorationLine: "underline"}}>Home</buttton>
+            <button className="menu-link" style={{textDecorationLine: "underline"}}>Home</button>
           </>
         )
       }
