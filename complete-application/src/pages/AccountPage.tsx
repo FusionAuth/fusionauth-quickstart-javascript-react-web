@@ -1,6 +1,6 @@
-import {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
-import {useFusionAuth} from "@fusionauth/react-sdk";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useFusionAuth } from "@fusionauth/react-sdk";
 
 let dollarUS = Intl.NumberFormat("en-US", {
   style: "currency",
@@ -9,19 +9,21 @@ let dollarUS = Intl.NumberFormat("en-US", {
 });
 
 export default function AccountPage() {
-  const [balance,] = useState(dollarUS.format(Math.ceil(Math.random() * 100000) / 100));
+  const [balance] = useState(
+    dollarUS.format(Math.ceil(Math.random() * 100000) / 100)
+  );
 
   const navigate = useNavigate();
 
-  const {isAuthenticated, isLoading} = useFusionAuth();
+  const { isLoggedIn, isFetchingUserInfo } = useFusionAuth();
 
   useEffect(() => {
-    if (!isAuthenticated) {
-      navigate('/');
+    if (!isLoggedIn) {
+      navigate("/");
     }
-  }, [isAuthenticated, navigate]);
+  }, [isLoggedIn, navigate]);
 
-  if (!isAuthenticated || isLoading) {
+  if (!isLoggedIn || isFetchingUserInfo) {
     return null;
   }
 
@@ -32,5 +34,5 @@ export default function AccountPage() {
         <div className="balance">{balance}</div>
       </div>
     </div>
-  )
+  );
 }
