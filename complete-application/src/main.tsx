@@ -17,6 +17,7 @@ const config: FusionAuthProviderConfig = {
   onRedirect: (state?: string) => {
     console.log(`Redirect happened with state value: ${state}`);
   },
+  scope: 'openid email profile offline_access'
 };
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
