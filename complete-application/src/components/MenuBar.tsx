@@ -2,12 +2,12 @@ import {useFusionAuth} from "@fusionauth/react-sdk";
 import {NavLink} from "react-router-dom";
 
 export default function MenuBar() {
-  const {isAuthenticated} = useFusionAuth();
+  const {isLoggedIn} = useFusionAuth();
 
   return (
     <div id="menu-bar" className="menu-bar">
       {
-        isAuthenticated ? (
+        isLoggedIn ? (
           <>
             <NavLink to="/make-change" className="menu-link" activeClassName="active">Make Change</NavLink>
             <NavLink to="/account" className="menu-link" activeClassName="active">Account</NavLink>
