@@ -2,7 +2,7 @@ import {useFusionAuth} from "@fusionauth/react-sdk";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 
-let dollarUS = Intl.NumberFormat("en-US", {
+const dollarUS = Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
   useGrouping: false,
@@ -14,13 +14,13 @@ export default function MakeChangePage() {
 
   const navigate = useNavigate();
 
-  const {isAuthenticated, isLoading} = useFusionAuth();
+  const {isLoggedIn, isFetchingUserInfo} = useFusionAuth();
 
   useEffect(() => {
-    if (!isAuthenticated) {
+    if (!isLoggedIn) {
       navigate('/');
     }
-  }, [isAuthenticated, navigate]);
+  }, [isLoggedIn, navigate]);
 
   const makeChange = (e) => {
     e.stopPropagation();
@@ -32,7 +32,7 @@ export default function MakeChangePage() {
     setChange({total, nickels, pennies})
   };
 
-  if (!isAuthenticated || isLoading) {
+  if (!isLoggedIn || isFetchingUserInfo) {
     return null;
   }
 
