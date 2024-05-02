@@ -9,8 +9,8 @@ export default function MenuBar() {
       {
         isLoggedIn ? (
           <>
-            <NavLink to="/make-change" className="menu-link" activeClassName="active">Make Change</NavLink>
-            <NavLink to="/account" className="menu-link" activeClassName="active">Account</NavLink>
+            <NavLink to="/make-change" className="menu-link">Make Change</NavLink>
+            <NavLink to="/account" className="menu-link">Account</NavLink>
           </>
         ) : (
           <>
