@@ -8,9 +8,11 @@ const dollarUS = Intl.NumberFormat("en-US", {
   useGrouping: false,
 });
 
+type Change = { total: number; nickels: number; pennies: number } | null;
+
 export default function MakeChangePage() {
-  const [amount, setAmount] = useState(0);
-  const [change, setChange] = useState(null);
+  const [amount, setAmount] = useState<number>(0);
+  const [change, setChange] = useState<Change>(null);
 
   const navigate = useNavigate();
 
@@ -22,7 +24,7 @@ export default function MakeChangePage() {
     }
   }, [isLoggedIn, navigate]);
 
-  const makeChange = (e) => {
+  const makeChange = (e: React.MouseEvent<HTMLFormElement>) => {
     e.stopPropagation();
     e.preventDefault();
 
@@ -39,7 +41,6 @@ export default function MakeChangePage() {
   return (
     <div className="app-container change-container">
       <h3>We Make Change</h3>
-
       {change && (
       <div className="change-message">
         We can make change for {dollarUS.format(change.total)} with {change.nickels} nickels and {change.pennies} pennies!
@@ -49,7 +50,7 @@ export default function MakeChangePage() {
       <form onSubmit={makeChange}>
         <div className="h-row">
           <div className="change-label">Amount in USD: $</div>
-          <input className="change-input" name="amount" value={amount} onChange={e => setAmount(e.target.value)} type="number" step=".01"/>
+          <input className="change-input" name="amount" value={amount} onChange={(e) => setAmount(parseFloat(e.target.value))} type="number" step=".01" />
           <input className="change-submit" type="submit" value="Make Change"/>
         </div>
       </form>
