@@ -45,8 +45,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div style={{ flex: 0 }}>
-        <img src={background} style={{ maxWidth: "800px" }} alt="" />
+      <div>
+        <img src={background} alt="" />
       </div>
     </div>
   );
