@@ -45,7 +45,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div>
+      <div className="image-container">
         <img src={background} alt="" />
       </div>
     </div>
