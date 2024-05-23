@@ -39,7 +39,7 @@ export default function HomePage() {
               style={{ cursor: "pointer" }}
               onClick={() => startRegister("state-from-register")}
             >
-              create a new account.
+            create a new account.
             </button>
           </p>
         </div>
