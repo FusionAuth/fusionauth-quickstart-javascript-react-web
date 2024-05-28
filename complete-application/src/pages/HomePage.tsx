@@ -22,31 +22,31 @@ export default function HomePage() {
   return (
     <div className="column-container">
       <div className="content-container">
-        <div style={{ marginBottom: "100px" }}>
+        <div>
           <h1>Welcome to Changebank</h1>
-          <p>
-            To get started,
+            <p>
+            Login or create a new account to get started
+            </p>
             <button
-              className="button-redirect"
+              className="button-lg"
               style={{ cursor: "pointer" }}
               onClick={() => startLogin("state-from-login")}
             >
-              log in
+              Login
             </button>
-            or
+            <br/>
             <button
               className="button-redirect"
               style={{ cursor: "pointer" }}
               onClick={() => startRegister("state-from-register")}
             >
-              create a new account.
+              Create a new account.
             </button>
-          </p>
         </div>
       </div>
 
-      <div style={{ flex: 0 }}>
-        <img src={background} style={{ maxWidth: "800px" }} alt="" />
+      <div className="image-container">
+        <img src={background} alt="Coins" />
       </div>
     </div>
   );

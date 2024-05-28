@@ -6,7 +6,7 @@ export default function LogoHeader() {
 
   return (
     <div id="logo-header">
-      <img src={changebankLogo} alt="Change Bank" width="257" height="55" />
+      <img src={changebankLogo} alt="Change Bank" width="259" height="70" />
       {isLoggedIn ? (
         <div className="h-row">
           <p className="header-email">{userInfo?.email}</p>
