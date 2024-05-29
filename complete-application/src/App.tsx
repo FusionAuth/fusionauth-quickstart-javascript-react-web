@@ -21,15 +21,12 @@ function App() {
         <LogoHeader />
         <MenuBar />
       </div>
-
-      <div style={{ flex: 1 }}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/account" element={<AccountPage />} />
           <Route path="/make-change" element={<MakeChangePage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-      </div>
     </div>
   );
 }
