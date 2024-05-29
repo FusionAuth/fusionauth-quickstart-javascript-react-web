@@ -1,3 +1,4 @@
+
 h1 {
   color: #096324;
 }
@@ -40,7 +41,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
 }
 
 #page-header {
@@ -66,7 +66,7 @@ body {
   padding: 15px 50px 15px 30px;
   background-color: #096324;
   font-size: 20px;
-  column-gap: 80px
+  column-gap: 80px;
 }
 
 .menu-link {
@@ -84,6 +84,7 @@ body {
 }
 
 .button-lg {
+  border: none;
   width: 140px;
   height: 38px;
   background-color: #096324;
@@ -110,6 +111,9 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex: 1;
+  height: calc(100vh - 11.9vh);
+  overflow-y: hidden;
 }
 
 .content-container {
@@ -119,6 +123,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  height: calc(100vh - 11.9vh);
+  overflow-y: hidden;
 }
 
 .balance {
@@ -172,10 +178,9 @@ body {
 .image-container {
   display: flex;
   flex: 1;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 11.9vh);
+  overflow-y: hidden;
 }
 
 .image-container img {
@@ -200,5 +205,4 @@ body {
     gap: 20px;
     padding: 12px 20px 12px 20px;
   }
-
 }
