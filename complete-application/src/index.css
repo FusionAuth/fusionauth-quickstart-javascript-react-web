@@ -170,7 +170,6 @@ body {
 }
 
 .app-container {
-  min-width: 100%;
   display: flex;
   flex-direction: column;
   padding: 40px;
