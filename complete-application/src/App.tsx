@@ -4,7 +4,6 @@ import LogoHeader from "./components/LogoHeader";
 import MenuBar from "./components/MenuBar";
 import HomePage from "./pages/HomePage";
 import AccountPage from "./pages/AccountPage";
-import MakeChangePage from "./pages/MakeChangePage";
 
 import { useFusionAuth } from "@fusionauth/react-sdk";
 
