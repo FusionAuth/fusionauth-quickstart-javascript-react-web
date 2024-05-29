@@ -5,8 +5,9 @@ h1 {
 
 h3 {
   color: #096324;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0;
 }
 
 a {
@@ -121,32 +122,45 @@ body {
 }
 
 .balance {
-  font-size: 50px;
-  font-weight: 800;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 32px;
 }
 
 .change-label {
-  font-size: 20px;
-  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 8px;
 }
 
 .change-input {
-  font-size: 20px;
-  height: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  width: 210px;
+  height: 42px;
+  padding: 10px 22px 10px 22px;
   text-align: end;
-  padding-right: 10px;
+  border-radius: 2px;
+  border-width: 1px;
+  border-color: #000000;
+  box-sizing: border-box;
 }
 
+
 .change-submit {
-  font-size: 15px;
-  height: 40px;
-  margin-left: 15px;
-  border-radius: 5px;
+  border-width: 1px;
+  border-color: #000000;
+  padding: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  height: 42px;
+  margin-left: 20px;
+  border-radius: 8px;
 }
 
 .change-message {
   font-size: 20px;
-  margin-bottom: 15px;
+  margin-top: 8px;
 }
 
 .error-message {
@@ -159,13 +173,7 @@ body {
   min-width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
-  margin-left: 80px;
-  margin-right: 0;
-}
-
-.change-container {
-  flex: 1;
+  padding: 40px;
 }
 
 .image-container {
@@ -192,7 +200,29 @@ body {
   #logo-header {
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
     padding: 12px 20px 12px 20px;
+  }
+  .h-row {
+    flex-direction: column;
+  }
+  .header-email {
+    margin-right: 0;
+    margin-top: 0;
+  }
+  .app-container {
+    padding: 24px;
+  }
+}
+
+  @media (max-width: 390px) {
+  .change-container {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .change-submit {
+    margin-left: 0;
+    margin-top: 8px;
   }
 }
