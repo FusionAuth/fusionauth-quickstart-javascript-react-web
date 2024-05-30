@@ -1,6 +1,6 @@
-import {useFusionAuth} from "@fusionauth/react-sdk";
-import {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
+import { useFusionAuth } from "@fusionauth/react-sdk";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const dollarUS = Intl.NumberFormat("en-US", {
   style: "currency",
@@ -16,11 +16,11 @@ export default function MakeChangePage() {
 
   const navigate = useNavigate();
 
-  const {isLoggedIn, isFetchingUserInfo} = useFusionAuth();
+  const { isLoggedIn, isFetchingUserInfo } = useFusionAuth();
 
   useEffect(() => {
     if (!isLoggedIn) {
-      navigate('/');
+      navigate("/");
     }
   }, [isLoggedIn, navigate]);
 
@@ -31,7 +31,7 @@ export default function MakeChangePage() {
     const total = amount;
     const nickels = Math.floor(amount / 0.05);
     const pennies = Math.round((amount - nickels * 0.05) * 100);
-    setChange({total, nickels, pennies})
+    setChange({ total, nickels, pennies });
   };
 
   if (!isLoggedIn || isFetchingUserInfo) {
@@ -39,21 +39,26 @@ export default function MakeChangePage() {
   }
 
   return (
-    <div className="app-container change-container">
-      <h3>We Make Change</h3>
-      {change && (
-      <div className="change-message">
-        We can make change for {dollarUS.format(change.total)} with {change.nickels} nickels and {change.pennies} pennies!
-      </div>
-      )}
-
-      <form onSubmit={makeChange}>
-        <div className="h-row">
-          <div className="change-label">Amount in USD: $</div>
-          <input className="change-input" name="amount" value={amount} onChange={(e) => setAmount(parseFloat(e.target.value))} type="number" step=".01" />
-          <input className="change-submit" type="submit" value="Make Change"/>
-        </div>
+    <div className="app-container">
+      <form className="change-container" onSubmit={makeChange}>
+        <h3>Make Change</h3>
+        <div className="change-label">Amount in USD</div>
+        <input
+          className="change-input"
+          name="amount"
+          value={amount}
+          onChange={(e) => setAmount(parseFloat(e.target.value))}
+          type="number"
+          step=".01"
+        />
+        <input className="change-submit" type="submit" value="Make Change" />
       </form>
+      {change && (
+        <div className="change-message">
+          We can make change for {dollarUS.format(change.total)} with{" "}
+          {change.nickels} nickels and {change.pennies} pennies!
+        </div>
+      )}
     </div>
   );
 }

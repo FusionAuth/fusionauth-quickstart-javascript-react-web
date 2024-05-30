@@ -1,8 +1,8 @@
+import { useFusionAuth } from "@fusionauth/react-sdk";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useFusionAuth } from "@fusionauth/react-sdk";
 
-let dollarUS = Intl.NumberFormat("en-US", {
+const dollarUS = Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
   useGrouping: false,
@@ -28,9 +28,9 @@ export default function AccountPage() {
   }
 
   return (
-    <div className="column-container">
-      <div className="app-container">
-        <h3>Your balance</h3>
+    <div className="app-container">
+      <div>
+        <h3>Your Balance</h3>
         <div className="balance">{balance}</div>
       </div>
     </div>
