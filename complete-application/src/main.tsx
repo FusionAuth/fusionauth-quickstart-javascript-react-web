@@ -11,6 +11,7 @@ import {
 const config: FusionAuthProviderConfig = {
   clientId: "e9fdb985-9173-4e01-9d73-ac2d60d1dc8e",
   redirectUri: "http://localhost:3000",
+  postLogoutRedirectUri: "http://localhost:3000/logged-out",
   serverUrl: "http://localhost:9011",
   shouldAutoFetchUserInfo: true,
   shouldAutoRefresh: true,
