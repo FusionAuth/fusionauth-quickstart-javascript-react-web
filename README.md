@@ -41,7 +41,7 @@ Install dependencies and run the React app with:
 ```
 cd complete-application
 npm i
-npm dev
+npm run dev
 ```
 
 Now vist the React app at [http://localhost:3000](http://localhost:3000)
