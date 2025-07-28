@@ -9,10 +9,10 @@ import {
 } from "@fusionauth/react-sdk";
 
 const config: FusionAuthProviderConfig = {
-  clientId: "e9fdb985-9173-4e01-9d73-ac2d60d1dc8e",
-  redirectUri: "http://localhost:3000",
-  postLogoutRedirectUri: "http://localhost:3000/logged-out",
-  serverUrl: "http://localhost:9011",
+  clientId: "393d8db8-cc25-4920-914a-ae5f7d05586c",
+  redirectUri: "https://fusionauth-quickstart-javascript-react-web.cashcat.dev",
+  postLogoutRedirectUri: "https://fusionauth-quickstart-javascript-react-web.cashcat.dev/logged-out",
+  serverUrl: "https://auth.cashcat.dev",
   shouldAutoFetchUserInfo: true,
   shouldAutoRefresh: true,
   onRedirect: (state?: string) => {
