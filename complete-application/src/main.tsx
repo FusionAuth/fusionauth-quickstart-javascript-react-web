@@ -11,7 +11,7 @@ import {
 const config: FusionAuthProviderConfig = {
   clientId: "393d8db8-cc25-4920-914a-ae5f7d05586c",
   redirectUri: "https://fusionauth-quickstart-javascript-react-web.cashcat.dev",
-  postLogoutRedirectUri: "https://fusionauth-quickstart-javascript-react-web.cashcat.dev/logged-out",
+  postLogoutRedirectUri: "https://fusionauth-quickstart-javascript-react-web.cashcat.dev",
   serverUrl: "https://auth.cashcat.dev",
   shouldAutoFetchUserInfo: true,
   shouldAutoRefresh: true,
