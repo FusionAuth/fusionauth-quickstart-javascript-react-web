@@ -1,4 +1,4 @@
-# Quickstart: React app with FusionAuth
+# Quickstart: React With FusionAuth
 
 This repository contains an React app that works with a locally running instance of [FusionAuth](https://fusionauth.io/), the authentication and authorization platform.
 
@@ -10,7 +10,7 @@ This repository contains an React app that works with a locally running instance
 - [Docker](https://www.docker.com): The quickest way to stand up FusionAuth.
   - (Alternatively, you can [Install FusionAuth Manually](https://fusionauth.io/docs/v1/tech/installation-guide/)).
 
-### FusionAuth Installation via Docker
+### FusionAuth Installation With Docker
 
 In the root of this project directory (next to this README) are two files [a Docker compose file](./docker-compose.yml) and an [environment variables configuration file](./.env). Assuming you have Docker installed on your machine, you can stand up FusionAuth up on your machine with:
 

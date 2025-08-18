@@ -1,0 +1,41 @@
+* {
+    color: black;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.centerContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.titlebar {
+    background-color: #1e293b;
+    margin: 0 0 12px 0;
+    min-height: 100px;
+    color: #f8fafc;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.button {
+    font-family: inherit;
+    border-radius: 4px;
+    padding: 10px 16px;
+    margin: 16px;
+    height: 40px;
+    background-color: #f58320;
+    border: none;
+    color: white;
+}
+.button:hover {
+    background-color: #ea580c;
+    color: white;
+}
+.button:disabled {
+    background-color: #1e293b;
+    color: #64748b;
+}
