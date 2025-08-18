@@ -1,15 +1,25 @@
-import React, { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './main.css'
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import { useNavigate } from "react-router-dom";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <div className="titlebar">
-      <button className='button'>Log out</button>
+export default function Account() {
+  const navigate = useNavigate();
+  return (
+    <div>
+      <div className="titlebar">
+        <button className='button'>Log out</button>
+      </div>
+      <div className='centerContainer'>
+        <br />
+        <div className="userInfoGrid">
+            <div>Name:</div>
+            <div></div>
+            <div>Email:</div>
+            <div></div>
+            <div>Birthdate:</div>
+            <div></div>
+          </div>
+      </div>
     </div>
-    <div className='centerContainer'>
-      <button className="button">Show my info</button>
-    </div>
-  </StrictMode>
-)
+  );
+}

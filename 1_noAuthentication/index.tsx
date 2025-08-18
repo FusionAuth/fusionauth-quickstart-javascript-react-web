@@ -1,15 +1,23 @@
-import React, { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './main.css'
-import { useState } from 'react'
+import React, { StrictMode } from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import Home from './home';
+import Account from './account';
 
-createRoot(document.getElementById('root')!).render(
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/account" element={<Account />} />
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <div className="titlebar">
-      <button className='button'>Log in</button>
-    </div>
-    <div className='centerContainer'>
-      <div className="center">Log in to request your information</div>
-    </div>
-  </StrictMode>,
-)
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+  </StrictMode>
+);
