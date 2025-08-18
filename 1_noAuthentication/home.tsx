@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <div className="titlebar">
         <button className='button' >Register</button>
-        <button className='button' >Log in</button>
+        <button className='button' onClick={() => navigate("/account")}>Log in</button>
       </div>
       <div className='centerContainer'>
         <div>Log in to request your information</div>

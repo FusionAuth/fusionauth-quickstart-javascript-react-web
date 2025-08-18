@@ -7,7 +7,7 @@ export default function Account() {
   return (
     <div>
       <div className="titlebar">
-        <button className='button'>Log out</button>
+        <button className='button' onClick={() => navigate("/")}>Log out</button>
       </div>
       <div className='centerContainer'>
         <br />
