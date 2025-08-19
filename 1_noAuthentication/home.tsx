@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <div>
       <div className="titlebar">
-        <button className='button' >Register</button>
         <button className='button' onClick={() => navigate("/account")}>Log in</button>
       </div>
       <div className='centerContainer'>

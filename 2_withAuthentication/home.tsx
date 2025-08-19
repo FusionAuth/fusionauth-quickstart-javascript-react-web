@@ -12,9 +12,6 @@ export default function Home() {
   return (
     <div>
       <div className="titlebar">
-        <button className='button' onClick={() => startRegister("state-from-register")} >
-          Register
-        </button>
         <button className='button' onClick={() => startLogin("state-from-login")} >
           Log in
         </button>
