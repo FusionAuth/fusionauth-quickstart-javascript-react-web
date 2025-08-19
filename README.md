@@ -41,7 +41,7 @@ The `2_withAuthentication` directory contains a minimal React app configured to 
 ```
 cd 2_withAuthentication
 npm install
-npx vite --host 0.0.0.0 --port 3000
+npx parcel index.html --host 0.0.0.0 --port 3000
 ```
 
 ▶️ Now vist the React app at [http://localhost:3000](http://localhost:3000)
