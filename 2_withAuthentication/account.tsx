@@ -16,13 +16,13 @@ export default function Account() {
       </div>
       <div className='centerContainer'>
         <div className="userInfoGrid">
-            <div>Name:</div>
-            <div>{userInfo?.given_name} {userInfo?.family_name}</div>
-            <div>Email:</div>
-            <div>{userInfo?.email}</div>
-            <div>Birthdate:</div>
-            <div>{userInfo?.birthdate}</div>
-          </div>
+          <div>Name:</div>
+          <div>{userInfo?.given_name} {userInfo?.family_name}</div>
+          <div>Email:</div>
+          <div>{userInfo?.email}</div>
+          <div>Birthdate:</div>
+          <div>{userInfo?.birthdate}</div>
+        </div>
       </div>
     </div>
   );

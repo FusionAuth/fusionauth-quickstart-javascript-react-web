@@ -12,13 +12,13 @@ export default function Account() {
       <div className='centerContainer'>
         <br />
         <div className="userInfoGrid">
-            <div>Name:</div>
-            <div></div>
-            <div>Email:</div>
-            <div></div>
-            <div>Birthdate:</div>
-            <div></div>
-          </div>
+          <div>Name:</div>
+          <div></div>
+          <div>Email:</div>
+          <div></div>
+          <div>Birthdate:</div>
+          <div></div>
+        </div>
       </div>
     </div>
   );
