@@ -15,8 +15,6 @@ export default function Account() {
         <button className='button' onClick={() => startLogout()}>Log out</button>
       </div>
       <div className='centerContainer'>
-        {/*<button className="button">Show my info</button>*/}
-        <br />
         <div className="userInfoGrid">
             <div>Name:</div>
             <div>{userInfo?.given_name} {userInfo?.family_name}</div>
