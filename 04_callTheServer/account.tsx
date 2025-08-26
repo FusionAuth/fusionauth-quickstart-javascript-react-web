@@ -4,20 +4,14 @@ import { useFusionAuth } from "@fusionauth/react-sdk";
 import { useNavigate } from "react-router-dom";
 
 function getExpiryTimeInSeconds(): number {
-  const parts = document.cookie.split('; ');
-  for (let i = 0; i < parts.length; i++) {
-    const [k, v] = parts[i].split('=');
-    if (k === 'app.at_exp') {
-      const expiry = Number(decodeURIComponent(v));
-      const now = Math.floor(Date.now() / 1000);
-      return expiry - now;
-    }
+  for (const cookie of document.cookie.split('; ')) {
+    const [key, value] = cookie.split('=');
+    if (key !== 'app.at_exp') continue;
+    const expiry = Number(decodeURIComponent(value));
+    const now = Math.floor(Date.now() / 1000);
+    return expiry - now;
   }
   return 0;
-}
-
-async function refreshAuthentication() {
-  await fetch("http://localhost:9011/app/refresh/e9fdb985-9173-4e01-9d73-ac2d60d1dc8e", { method: "POST", credentials: "include" });
 }
 
 export default function Account() {
@@ -47,10 +41,12 @@ export default function Account() {
           <div>                          </div><div>                                              </div>
           <div>Authentication expires in:</div><div>{expiryTimeInSeconds} seconds                 </div>
         </div>
+        {/*tag::fusionauth[]*/}
         <br />
         <div>
           <button className="button" onClick={refreshToken}>Refresh authentication</button>
         </div>
+        {/*end::fusionauth[]*/}
       </div>
     </div>
   );

@@ -34,12 +34,12 @@ You can log into the [FusionAuth admin UI](http://localhost:9011/admin) and look
 
 ### React complete-application
 
-The `2_withAuthentication` directory contains a minimal React app configured to authenticate with locally running FusionAuth.
+The `04_callTheServer` directory contains a minimal React app configured to authenticate with locally running FusionAuth.
 
 ▶️ Install dependencies and run the React app with:
 
 ```
-cd 2_withAuthentication
+cd 04_callTheServer
 npm install
 npx parcel index.html --host 0.0.0.0 --port 3000
 ```

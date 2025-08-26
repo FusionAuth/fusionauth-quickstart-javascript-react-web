@@ -14,8 +14,6 @@ export default function Account() {
         <div className="userInfoGrid">
           <div>Name:</div>
           <div></div>
-          <div>Email:</div>
-          <div></div>
           <div>Birthdate:</div>
           <div></div>
         </div>
