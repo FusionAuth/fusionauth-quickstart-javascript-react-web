@@ -20,7 +20,7 @@ services:
       - db_data:/var/lib/postgresql/data
 
   fa:
-    image: fusionauth/fusionauth-app:1.59.0
+    image: fusionauth/fusionauth-app:1.59.1
     container_name: fa
     platform: linux/amd64
     depends_on:
