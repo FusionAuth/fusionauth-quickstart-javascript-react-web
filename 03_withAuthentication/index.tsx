@@ -24,7 +24,7 @@ function App() {
   //tag::c[]
   const { isFetchingUserInfo } = useFusionAuth();
   if (isFetchingUserInfo) return null;
-  //tag::c[]
+  //end::c[]
   return (
     <Routes>
       <Route path="/" element={<Home />} />
