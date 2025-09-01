@@ -5,7 +5,7 @@ import { FusionAuthProvider, FusionAuthProviderConfig, useFusionAuth } from '@fu
 import Home from './home';
 import Account from './account';
 
-const config: FusionAuthProviderConfig = {
+const fusionAuthProviderConfig: FusionAuthProviderConfig = {
   clientId: 'e9fdb985-9173-4e01-9d73-ac2d60d1dc8e',
   redirectUri: 'http://localhost:3000',
   postLogoutRedirectUri: 'http://localhost:3000',
@@ -31,7 +31,7 @@ function App() {
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <FusionAuthProvider {...config}>
+      <FusionAuthProvider {...fusionAuthProviderConfig}>
         <App />
       </FusionAuthProvider>
     </BrowserRouter>
