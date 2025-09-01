@@ -16,9 +16,9 @@ export default function Home() {
   return (
     <div>
       <div className="titlebar">
-        //tag::c[]
+        {/*tag::c[]*/}
         <button className='button' onClick={() => startLogin("state-from-login")} >
-        //end::c[]
+        {/*end::c[]*/}
           Log in
         </button>
       </div>
