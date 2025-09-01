@@ -1,4 +1,4 @@
-import React, { StrictMode, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
