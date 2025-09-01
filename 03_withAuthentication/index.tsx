@@ -1,6 +1,6 @@
-//tag::[]
+//tag::a[]
 import { FusionAuthProvider, FusionAuthProviderConfig, useFusionAuth } from '@fusionauth/react-sdk';
-//end::1[]
+//end::a[]
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
