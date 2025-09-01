@@ -40,16 +40,16 @@ export default function Account() {
         <span className='white'>{userInfo?.email}</span>
         <button className='button' onClick={() => startLogout()}>Log out</button>
       </div>
-      //end::c[]
+      //end::d[]
       <div className='centerContainer'>
         <div className="userInfoGrid">
           <div>Name:                     </div><div>{userInfo?.given_name} {userInfo?.family_name}</div>
           <div>Birthdate:                </div><div>{userInfo?.birthdate}                         </div>
           <div>                          </div><div>                                              </div>
           <div>                          </div><div>                                              </div>
-          //tag::d[]
+          //tag::e[]
           <div>Authentication expires in:</div><div>{expiryTimeInSeconds} seconds                 </div>
-          //end::d[]
+          //end::e[]
         </div>
       </div>
     </div>
