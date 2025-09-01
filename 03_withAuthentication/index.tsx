@@ -7,6 +7,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Home from './home';
 import Account from './account';
 
+//tag::b[]
 const fusionAuthProviderConfig: FusionAuthProviderConfig = {
   clientId: 'e9fdb985-9173-4e01-9d73-ac2d60d1dc8e',
   redirectUri: 'http://localhost:3000',
@@ -17,6 +18,7 @@ const fusionAuthProviderConfig: FusionAuthProviderConfig = {
   onRedirect: (state?: string) => { console.log(`Redirect happened with state value: ${state}`); },
   scope: 'openid email profile offline_access',
 };
+//end::b[]
 
 function App() {
   const { isFetchingUserInfo } = useFusionAuth();
@@ -30,6 +32,7 @@ function App() {
   );
 }
 
+//tag::c[]
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
@@ -39,3 +42,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     </BrowserRouter>
   </StrictMode>
 );
+//end::c[]
