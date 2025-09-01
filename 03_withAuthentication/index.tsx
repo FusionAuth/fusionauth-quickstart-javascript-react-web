@@ -21,8 +21,10 @@ const fusionAuthProviderConfig: FusionAuthProviderConfig = {
 //end::b[]
 
 function App() {
+  //tag::c[]
   const { isFetchingUserInfo } = useFusionAuth();
   if (isFetchingUserInfo) return null;
+  //tag::c[]
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -32,7 +34,7 @@ function App() {
   );
 }
 
-//tag::c[]
+//tag::d[]
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
@@ -42,4 +44,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     </BrowserRouter>
   </StrictMode>
 );
-//end::c[]
+//end::d[]
