@@ -1,7 +1,7 @@
+import { FusionAuthProvider, FusionAuthProviderConfig, useFusionAuth } from '@fusionauth/react-sdk';
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import { FusionAuthProvider, FusionAuthProviderConfig, useFusionAuth } from '@fusionauth/react-sdk';
 import Home from './home';
 import Account from './account';
 

@@ -1,8 +1,8 @@
-import React, { StrictMode, useEffect } from 'react';
+import { useFusionAuth} from "@fusionauth/react-sdk";
+import React, { useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { useState } from 'react';
-import { useNavigate, BrowserRouter } from "react-router-dom";
-import { useFusionAuth, FusionAuthProvider, FusionAuthProviderConfig} from "@fusionauth/react-sdk";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const navigate = useNavigate();

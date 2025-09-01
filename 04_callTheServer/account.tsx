@@ -1,6 +1,6 @@
+import { useFusionAuth } from "@fusionauth/react-sdk";
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { useFusionAuth } from "@fusionauth/react-sdk";
 import { useNavigate } from "react-router-dom";
 
 function getExpiryTimeInSeconds(): number {
@@ -39,7 +39,9 @@ export default function Account() {
           <div>Birthdate:                </div><div>{userInfo?.birthdate}                         </div>
           <div>                          </div><div>                                              </div>
           <div>                          </div><div>                                              </div>
+          //tag::e[]
           <div>Authentication expires in:</div><div>{expiryTimeInSeconds} seconds                 </div>
+          //end::e[]
         </div>
         {/*tag::fusionauth[]*/}
         <br />
