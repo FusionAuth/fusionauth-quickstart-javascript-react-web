@@ -1,4 +1,4 @@
-//tag::1[]
+//tag::[]
 import { FusionAuthProvider, FusionAuthProviderConfig, useFusionAuth } from '@fusionauth/react-sdk';
 //end::1[]
 import React, { StrictMode } from 'react';
