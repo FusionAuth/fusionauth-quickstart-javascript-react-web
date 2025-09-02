@@ -35,7 +35,7 @@ export default function Account() {
         </div>
         <br />
         <div>
-          <button className="button" onClick={getUserInfo}>Get user info</button>
+          <button className="button" onClick={getUserInfo}>Refresh user info</button>
         </div>
         {/*end::b[]*/}
       </div>
