@@ -39,9 +39,9 @@ export default function Account() {
           <div>Birthdate:                </div><div>{userInfo?.birthdate}                         </div>
           <div>                          </div><div>                                              </div>
           <div>                          </div><div>                                              </div>
-          //tag::e[]
+          {/*tag::e[]*/}
           <div>Authentication expires in:</div><div>{expiryTimeInSeconds} seconds                 </div>
-          //end::e[]
+          {/*end::e[]*/}
         </div>
         {/*tag::fusionauth[]*/}
         <br />
