@@ -22,13 +22,13 @@ export default function Account() {
   //end::a[]
 
   return (
+    //tag::b[]
     <div>
       <div className="titlebar">
         <span className='white'>{userInfo?.email}</span>
         <button className='button' onClick={() => startLogout()}>Log out</button>
       </div>
       <div className='centerContainer'>
-        {/*tag::b[]*/}
         <div className="userInfoGrid">
           <div>Name:                     </div><div>{newUserInfo?.given_name} {newUserInfo?.family_name}</div>
           <div>Birthdate:                </div><div>{newUserInfo?.birthdate}                         </div>
@@ -37,8 +37,9 @@ export default function Account() {
         <div>
           <button className="button" onClick={getUserInfo}>Refresh user info</button>
         </div>
-        {/*end::b[]*/}
+
       </div>
     </div>
+    //end::b[]
   );
 }
