@@ -13,13 +13,13 @@ export default function Account() {
 //end::b[]
 
   return (
+    //tag::c[]
     <div>
-      {/*tag::c[]*/}
       <div className="titlebar">
         <span className='white'>{userInfo?.email}</span>
         <button className='button' onClick={() => startLogout()}>Log out</button>
       </div>
-      {/*end::c[]*/}
+
       <div className='centerContainer'>
         <div className="userInfoGrid">
           <div>Name:                     </div><div>{userInfo?.given_name} {userInfo?.family_name}</div>
@@ -27,5 +27,6 @@ export default function Account() {
         </div>
       </div>
     </div>
+  //end::c[]
   );
 }
