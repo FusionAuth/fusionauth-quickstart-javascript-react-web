@@ -14,9 +14,6 @@ export default function Account() {
         <div className="userInfoGrid">
           <div>Name:                     </div><div></div>
           <div>Birthdate:                </div><div></div>
-          <div>                          </div><div></div>
-          <div>                          </div><div></div>
-          <div>Authentication expires in:</div><div></div>
         </div>      </div>
     </div>
   );
