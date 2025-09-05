@@ -6,9 +6,8 @@ export default function Account() {
   const navigate = useNavigate();
   const { isLoggedIn, isFetchingUserInfo, startLogout, userInfo, refreshToken } = useFusionAuth();
   useEffect(() => { if (!isLoggedIn) navigate("/"); }, [isLoggedIn, navigate]);
+//tag::a[]
   if (!isLoggedIn || isFetchingUserInfo) return null;
-
-  //tag::a[]
   const [newUserInfo, setNewUserInfo] = useState({'given_name': '', 'family_name': '', 'birthdate': ''});
   async function getUserInfo() {
     const response = await fetch('http://localhost:9011/app/me', {
@@ -19,10 +18,9 @@ export default function Account() {
     const info = await response.json();
     setNewUserInfo(info);
   }
-  //end::a[]
-
   return (
-    //tag::b[]
+//end::a[]
+//tag::b[]
     <div>
       <div className="titlebar">
         <span className='white'>{userInfo?.email}</span>
@@ -39,6 +37,6 @@ export default function Account() {
         </div>
       </div>
     </div>
-    //end::b[]
   );
 }
+//end::b[]
