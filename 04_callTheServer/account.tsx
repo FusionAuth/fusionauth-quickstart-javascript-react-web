@@ -37,7 +37,6 @@ export default function Account() {
         <div>
           <button className="button" onClick={getUserInfo}>Refresh user info</button>
         </div>
-
       </div>
     </div>
     //end::b[]

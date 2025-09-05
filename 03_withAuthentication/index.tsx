@@ -20,12 +20,12 @@ const fusionAuthProviderConfig: FusionAuthProviderConfig = {
 };
 //end::b[]
 
+//tag::c[]
 function App() {
-  //tag::c[]
   const { isFetchingUserInfo } = useFusionAuth();
   if (isFetchingUserInfo) return null;
-  //end::c[]
   return (
+//end::c[]
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/account" element={<Account />} />
