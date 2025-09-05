@@ -6,20 +6,20 @@ import { createRoot } from 'react-dom/client';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
+//tag::b[]
 export default function Home() {
-  //tag::b[]
   const navigate = useNavigate();
   const { isLoggedIn, isFetchingUserInfo, startLogin, startRegister } = useFusionAuth();
   useEffect(() => { if (isLoggedIn) navigate("/account"); }, [isLoggedIn, navigate]);
   if (isLoggedIn || isFetchingUserInfo) return null;
-  //end::b[]
   return (
+//end::b[]
     <div>
+{/*tag::c[]*/}
       <div className="titlebar">
-        {/*tag::c[]*/}
         <button className='button' onClick={() => startLogin("state-from-login")} >
-        {/*end::c[]*/}
           Log in
+{/*end::c[]*/}
         </button>
       </div>
       <div className='centerContainer'>

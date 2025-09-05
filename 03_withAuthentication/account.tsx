@@ -4,22 +4,20 @@ import { useFusionAuth } from "@fusionauth/react-sdk";
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
-export default function Account() {
 //tag::b[]
+export default function Account() {
   const navigate = useNavigate();
   const { isLoggedIn, isFetchingUserInfo, startLogout, userInfo, refreshToken } = useFusionAuth();
   useEffect(() => { if (!isLoggedIn) navigate("/"); }, [isLoggedIn, navigate]);
   if (!isLoggedIn || isFetchingUserInfo) return null;
-//end::b[]
-
+//tag::c[]
   return (
-    //tag::c[]
+//end::b[]
     <div>
       <div className="titlebar">
         <span className='white'>{userInfo?.email}</span>
         <button className='button' onClick={() => startLogout()}>Log out</button>
       </div>
-
       <div className='centerContainer'>
         <div className="userInfoGrid">
           <div>Name:                     </div><div>{userInfo?.given_name} {userInfo?.family_name}</div>
@@ -27,6 +25,6 @@ export default function Account() {
         </div>
       </div>
     </div>
-  //end::c[]
   );
 }
+//end::c[]
