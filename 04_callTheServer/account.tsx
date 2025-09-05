@@ -19,8 +19,8 @@ export default function Account() {
     setNewUserInfo(info);
   }
   return (
-//end::a[]
 //tag::b[]
+//end::a[]
     <div>
       <div className="titlebar">
         <span className='white'>{userInfo?.email}</span>
