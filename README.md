@@ -1,24 +1,24 @@
-# Quickstart: React app with FusionAuth
+# Quickstart: React With FusionAuth
 
-This repository contains an React app that works with a locally running instance of [FusionAuth](https://fusionauth.io/), the authentication and authorization platform.
+This repository contains an React app that works with a locally running instance of [FusionAuth](https://fusionauth.io), the authentication and authorization platform. There is an [tutorial](https://fusionauth.io/docs/quickstarts/quickstart-javascript-react-web) accompanying this code.
 
 ## Setup
 
 ### Prerequisites
 
-- [Node](https://nodejs.org/en/download/): This will be needed to run the React app.
-- [Docker](https://www.docker.com): The quickest way to stand up FusionAuth.
-  - (Alternatively, you can [Install FusionAuth Manually](https://fusionauth.io/docs/v1/tech/installation-guide/)).
+[Docker](https://www.docker.com) is all you need to run FusionAuth and the React app.
 
-### FusionAuth Installation via Docker
+### FusionAuth Installation With Docker
 
-In the root of this project directory (next to this README) are two files [a Docker compose file](./docker-compose.yml) and an [environment variables configuration file](./.env). Assuming you have Docker installed on your machine, you can stand up FusionAuth up on your machine with:
+In the `fusionauth` directory of this repository are two files [a Docker compose file](./docker-compose.yml) and an [environment variables configuration file](./.env).
+
+▶️ Open a terminal in this directory and start FusionAuth with:
 
 ```
-docker compose up -d
+docker compose up
 ```
 
-The FusionAuth configuration files also make use of a unique feature of FusionAuth, called [Kickstart](https://fusionauth.io/docs/v1/tech/installation-guide/kickstart): when FusionAuth comes up for the first time, it will look at the [Kickstart file](./kickstart/kickstart.json) and mimic API calls to configure FusionAuth for use when it is first run.
+The FusionAuth configuration files also use a feature of FusionAuth called [Kickstart](https://fusionauth.io/docs/v1/tech/installation-guide/kickstart). When FusionAuth starts for the first time, it will look at the [Kickstart file](./fusionauth/kickstart/kickstart.json) and mimic API calls to configure FusionAuth so it is ready to talk to the React app on port 3000.
 
 > **NOTE**: If you ever want to reset the FusionAuth system, delete the volumes created by docker compose by executing `docker compose down -v`.
 
@@ -34,17 +34,17 @@ You can log into the [FusionAuth admin UI](http://localhost:9011/admin) and look
 
 ### React complete-application
 
-The `complete-application` directory contains a minimal React app configured to authenticate with locally running FusionAuth.
+The `04_callTheServer` directory contains a minimal React app configured to authenticate with locally running FusionAuth.
 
-Install dependencies and run the React app with:
+▶️ Install dependencies and run the React app with:
 
 ```
-cd complete-application
-npm i
-npm run dev
+cd 04_callTheServer
+npm install
+npx parcel index.html --host 0.0.0.0 --port 3000
 ```
 
-Now vist the React app at [http://localhost:3000](http://localhost:3000)
+▶️ Now vist the React app at [http://localhost:3000](http://localhost:3000)
 You can log in with a user preconfigured during Kickstart, `richard@example.com` with the password of `password`.
 
 ### Further Information
@@ -59,4 +59,4 @@ Ensure FusionAuth is running in the Docker container. You should be able to logi
 
 ### Maintaining this repo
 
-> Please note that code snippets from this repository are pulled into [this tutorial](https://fusionauth.io/docs/quickstarts/quickstart-javascript-react-web) on the fusionauth site. Please consider this when making changes here.
+> Please note that code snippets from this repository are dynamically included in the [tutorial](https://fusionauth.io/docs/quickstarts/quickstart-javascript-react-web) on the FusionAuth site. Please consider this when making changes here so that you don't break the tutorial.

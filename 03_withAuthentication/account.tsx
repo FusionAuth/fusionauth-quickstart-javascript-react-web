@@ -1,0 +1,30 @@
+//tag::a[]
+import { useFusionAuth } from "@fusionauth/react-sdk";
+//end::a[]
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
+
+//tag::b[]
+export default function Account() {
+  const navigate = useNavigate();
+  const { isLoggedIn, isFetchingUserInfo, startLogout, userInfo, refreshToken } = useFusionAuth();
+  useEffect(() => { if (!isLoggedIn) navigate("/"); }, [isLoggedIn, navigate]);
+  if (!isLoggedIn || isFetchingUserInfo) return null;
+//tag::c[]
+  return (
+//end::b[]
+    <div>
+      <div className="titlebar">
+        <span className='white'>{userInfo?.email}</span>
+        <button className='button' onClick={() => startLogout()}>Log out</button>
+      </div>
+      <div className='centerContainer'>
+        <div className="userInfoGrid">
+          <div>Name:                     </div><div>{userInfo?.given_name} {userInfo?.family_name}</div>
+          <div>Birthdate:                </div><div>{userInfo?.birthdate}                         </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+//end::c[]
