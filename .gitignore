@@ -150,3 +150,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# yalc local store
+**/.yalc/**
+**/yalc.lock
