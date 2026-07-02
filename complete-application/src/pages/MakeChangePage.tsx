@@ -24,7 +24,7 @@ export default function MakeChangePage() {
     }
   }, [isLoggedIn, navigate]);
 
-  const makeChange = (e: React.MouseEvent<HTMLFormElement>) => {
+  const makeChange = (e: React.FormEvent<HTMLFormElement>) => {
     e.stopPropagation();
     e.preventDefault();
 
